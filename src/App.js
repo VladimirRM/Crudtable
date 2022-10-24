@@ -1,6 +1,13 @@
 
 import './App.css';
 
+
+const initialValues = {
+  userName:'',
+  userSurname:'',
+  userSalary
+}
+
 function App() {
   return (
     <div>
@@ -21,8 +28,8 @@ function App() {
           <input placeholder='Write surname' />
           <input placeholder='Write your salary' />
           <div>
-            <button></button>
-            <button></button>
+            <button type='reset'>Clean</button>
+            <button type='submit'>Add</button>
           </div>
         </form>
       </div>
