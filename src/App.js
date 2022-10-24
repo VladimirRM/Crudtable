@@ -12,6 +12,7 @@ function App() {
           <th>User SurName</th>
           <th>User Salary</th>
           <th>Action</th>
+          <tbody></tbody>
         </table>
       </div>
      </div>
