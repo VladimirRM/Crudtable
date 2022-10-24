@@ -5,14 +5,18 @@ import './App.css';
 const initialValues = {
   userName:'',
   userSurname:'',
-  userSalary
+  userSalary:''
 }
 
 function App() {
+const [useData,setUserData]= useState(initialValues)
+
+
+
   return (
-    <div>
-     <div>
-      <div>
+    <div className='wrapper'>
+     <div  className="wrapper-content">
+      <div className='table-data'>
         <table>
           <th>#</th>
           <th>User Name</th>
@@ -27,11 +31,15 @@ function App() {
           <input placeholder='Write your name' />
           <input placeholder='Write surname' />
           <input placeholder='Write your salary' />
-          <div>
+          <div className='actions'>
             <button type='reset'>Clean</button>
             <button type='submit'>Add</button>
           </div>
         </form>
+
+
+
+
       </div>
      </div>
      
