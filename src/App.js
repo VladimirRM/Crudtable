@@ -8,6 +8,10 @@ function App() {
       <div>
         <table>
           <th>#</th>
+          <th>User Name</th>
+          <th>User SurName</th>
+          <th>User Salary</th>
+          <th>Action</th>
         </table>
       </div>
      </div>
