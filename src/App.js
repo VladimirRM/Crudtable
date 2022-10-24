@@ -17,7 +17,13 @@ function App() {
       </div>
       <div>
         <form>
-          <input placeholder='' />
+          <input placeholder='Write your name' />
+          <input placeholder='Write surname' />
+          <input placeholder='Write your salary' />
+          <div>
+            <button></button>
+            <button></button>
+          </div>
         </form>
       </div>
      </div>
