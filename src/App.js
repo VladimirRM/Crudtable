@@ -11,9 +11,14 @@ function App() {
           <th>User Name</th>
           <th>User SurName</th>
           <th>User Salary</th>
-          <th>Action</th>
+          <th>Actions</th>
           <tbody></tbody>
         </table>
+      </div>
+      <div>
+        <form>
+          <input placeholder='' />
+        </form>
       </div>
      </div>
      
