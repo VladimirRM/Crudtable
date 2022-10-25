@@ -14,7 +14,7 @@ function App() {
   const handlerSubmitUser = (e) => {
     e.preventDefault();
     setUsers((prevState) => [...prevState, userData]);
-    setUserData(initialValues )
+    setUserData(initialValues);
   };
 
   console.log("users", users);
@@ -42,15 +42,17 @@ function App() {
                   userName: e.target.value,
                 }))
               }
+              value={userData.userName}
             />
             <input
               placeholder="Write surname"
               onChange={(e) =>
                 setUserData((prevState) => ({
                   ...prevState,
-                  userSurName: e.target.value,
+                  userSurname: e.target.value,
                 }))
               }
+              value={userData.userSurname} 
             />
             <input
               placeholder="Write your salary"
@@ -60,6 +62,7 @@ function App() {
                   userSalary: e.target.value,
                 }))
               }
+              value={userData.userSalary}
             />
 
             <div className="buttons-wrapper">
