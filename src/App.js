@@ -29,7 +29,13 @@ function App() {
             <th>User SurName</th>
             <th>User Salary</th>
             <th>Actions</th>
-            <tbody></tbody>
+            <tbody>
+              {users.map((user)=>(
+                <React.Fragment>
+
+                </React.Fragment>
+              ))}
+            </tbody>
           </table>
         </div>
         <div>
