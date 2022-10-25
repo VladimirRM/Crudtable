@@ -11,11 +11,13 @@ function App() {
   const [userData, setUserData] = useState(initialValues);
   const [users, setUsers] = useState([]);
 
-  const handlerSubmitUser = (e)=>{
-     e.preventDefault()    
-  }
+  const handlerSubmitUser = (e) => {
+    e.preventDefault();
+    setUsers((prevState) => [...prevState, userData]);
+    setUserData(initialValues )
+  };
 
-  console.log("userData", userData);
+  console.log("users", users);
 
   return (
     <div className="wrapper">
@@ -31,7 +33,7 @@ function App() {
           </table>
         </div>
         <div>
-          <form onSubmit={handlerSubmitUser }>
+          <form onSubmit={handlerSubmitUser}>
             <input
               placeholder="Write your name"
               onChange={(e) =>
