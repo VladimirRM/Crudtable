@@ -9,9 +9,9 @@ const initialValues = {
 }
 
 function App() {
-const [useData,setUserData]= useState(initialValues)
+const [userData,setUserData]= useState(initialValues)
 
-
+console.log('userData', userData);
 
   return (
     <div className='wrapper'>
@@ -28,10 +28,21 @@ const [useData,setUserData]= useState(initialValues)
       </div>
       <div>
         <form>
-          <input placeholder='Write your name' />
+          <input placeholder='Write your name' onChange={(e)=>setUserData((prevState)=>({
+            ...prevState,
+            userName:e.target.value
+          }))}/>
+          <input placeholder='Write your name' onChange={(e)=>setUserData((prevState)=>({
+            ...prevState,
+            userName:e.target.value
+          }))}/>
+          <input placeholder='Write your name' onChange={(e)=>setUserData((prevState)=>({
+            ...prevState,
+            userName:e.target.value
+          }))}/>
           <input placeholder='Write surname' />
           <input placeholder='Write your salary' />
-          <div className='actions'>
+          <div className='buttons-wrapper'>
             <button type='reset'>Clean</button>
             <button type='submit'>Add</button>
           </div>
