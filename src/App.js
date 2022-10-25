@@ -12,7 +12,7 @@ function App() {
   const [users, setUsers] = useState([]);
 
   const handlerSubmitUser = (e)=>{
-         
+     e.preventDefault()    
   }
 
   console.log("userData", userData);
@@ -31,7 +31,7 @@ function App() {
           </table>
         </div>
         <div>
-          <form>
+          <form onSubmit={handlerSubmitUser }>
             <input
               placeholder="Write your name"
               onChange={(e) =>
