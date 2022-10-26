@@ -33,6 +33,10 @@ function App() {
               {users.map((user) => (
                <tr>
                 <td>{users.length}</td>
+                <td>{users.userName}</td>
+                <td>{users.userSurname}</td>
+                <td>{users.userSalary}</td>
+                <td>{users.length}</td>
                </tr>
               ))}
             </tbody>
