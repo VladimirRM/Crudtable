@@ -11,21 +11,21 @@ function App() {
   const [userData, setUserData] = useState(initialValues);
   const [users, setUsers] = useState([]);
 
-  const isFilledFields = userData.userName && userData.userSurname && userData.userSalary
+  const isFilledFields =
+    userData.userName && userData.userSurname && userData.userSalary;
 
   const handlerSubmitUser = (e) => {
-
     e.preventDefault();
 
-  const isFilledFields = userData.userName && userData.userSurname && userData.userSalary
-     if(isFilledFields){
+    const isFilledFields =
+      userData.userName && userData.userSurname && userData.userSalary;
+    if (isFilledFields) {
       setUsers((prevState) => [...prevState, userData]);
       setUserData(initialValues);
-     }
-
-   
+    }
   };
 
+  const handleCleanClick = ()=> setUserData
 
   console.log("users", users);
 
@@ -49,7 +49,12 @@ function App() {
                   <td>
                     <div>
                       <button className="edit-action">Edit</button>
-                      <button disabled={!isFilledFields} className="remove-action">Remove</button>
+                      <button
+                        disabled={!isFilledFields}
+                        className="remove-action"
+                      >
+                        Remove
+                      </button>
                     </div>
                   </td>
                 </tr>
