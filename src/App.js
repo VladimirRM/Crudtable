@@ -32,7 +32,7 @@ function App() {
             <tbody>
               {users.map((user) => (
                <tr>
-                <td></td>
+                <td>{users.length}</td>
                </tr>
               ))}
             </tbody>
