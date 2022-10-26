@@ -38,8 +38,8 @@ function App() {
                 <td>{users.userSalary}</td>
                 <td>
                   <div>
-                    <button>Edit</button>
-                    <button>Remove</button>
+                    <button className="edit-action">Edit</button>
+                    <button className="remove-action">Remove</button>
                   </div>
                   </td>
                </tr>
