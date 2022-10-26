@@ -30,19 +30,19 @@ function App() {
             <th>User Salary</th>
             <th>Actions</th>
             <tbody>
-              {users.map((user) => (
-               <tr>
-                <td>{users.length}</td>
-                <td>{users.userName}</td>
-                <td>{users.userSurname}</td>
-                <td>{users.userSalary}</td>
-                <td>
-                  <div>
-                    <button className="edit-action">Edit</button>
-                    <button className="remove-action">Remove</button>
-                  </div>
+              {users.map((user, index) => (
+                <tr>
+                  <td>{index + 1}</td>
+                  <td>{users.userName}</td>
+                  <td>{users.userSurname}</td>
+                  <td>{users.userSalary}</td>
+                  <td>
+                    <div>
+                      <button className="edit-action">Edit</button>
+                      <button className="remove-action">Remove</button>
+                    </div>
                   </td>
-               </tr>
+                </tr>
               ))}
             </tbody>
           </table>
