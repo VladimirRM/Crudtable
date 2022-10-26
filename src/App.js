@@ -30,9 +30,10 @@ function App() {
             <th>User Salary</th>
             <th>Actions</th>
             <tbody>
-              {users.map((user)=>(
+              {users.map((user) => (
                 <React.Fragment>
-
+                  <div>111</div>
+                  <div>2222</div>
                 </React.Fragment>
               ))}
             </tbody>
@@ -58,7 +59,7 @@ function App() {
                   userSurname: e.target.value,
                 }))
               }
-              value={userData.userSurname} 
+              value={userData.userSurname}
             />
             <input
               placeholder="Write your salary"
