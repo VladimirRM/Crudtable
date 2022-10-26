@@ -17,6 +17,8 @@ function App() {
     setUserData(initialValues);
   };
 
+  const isFilledFields = userData.userName && userData.userSurname && userData.userSalary
+
   console.log("users", users);
 
   return (
