@@ -31,10 +31,9 @@ function App() {
             <th>Actions</th>
             <tbody>
               {users.map((user) => (
-                <React.Fragment>
-                  <div>3333</div>
-                  <div>2222</div>
-                </React.Fragment>
+               <tr>
+                <td></td>
+               </tr>
               ))}
             </tbody>
           </table>
