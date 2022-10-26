@@ -25,7 +25,7 @@ function App() {
     }
   };
 
-  const handleCleanClick = ()=> setUserData
+  const handleCleanClick = ()=> setUserData(initialValues)
 
   console.log("users", users);
 
@@ -63,7 +63,7 @@ function App() {
           </table>
         </div>
         <div>
-          <form onSubmit={handlerSubmitUser}>
+          <form onSubmit={handlerSubmitUser} onReset={handleCleanClick}>
             <input
               placeholder="Write your name"
               onChange={(e) =>
