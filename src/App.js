@@ -36,7 +36,12 @@ function App() {
                 <td>{users.userName}</td>
                 <td>{users.userSurname}</td>
                 <td>{users.userSalary}</td>
-                <td>{users.length}</td>
+                <td>
+                  <div>
+                    <button>Edit</button>
+                    <button>Remove</button>
+                  </div>
+                  </td>
                </tr>
               ))}
             </tbody>
