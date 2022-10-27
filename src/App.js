@@ -26,7 +26,10 @@ function App() {
   };
 
   const handleCleanClick = () => setUserData(initialValues);
-  const handleRemoveClick = (index) => {};
+  const handleRemoveClick = (index) => {
+    setUsers(users.filter((user, userIndex)=>userIndex !== index)
+  )
+};
 
   console.log("users", users);
 
