@@ -26,7 +26,7 @@ function App() {
   };
 
   const handleCleanClick = () => setUserData(initialValues);
-  const handleRemoveClick = () => {};
+  const handleRemoveClick = (index) => {};
 
   console.log("users", users);
 
@@ -53,7 +53,7 @@ function App() {
                       <button
                         disabled={!isFilledFields}
                         className="remove-action"
-                      onClick={handleRemoveClick}
+                      onClick={()=>handleRemoveClick(index)}
                       >
                         Remove
                       </button>
