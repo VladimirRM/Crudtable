@@ -10,6 +10,7 @@ const initialValues = {
 function App() {
   const [userData, setUserData] = useState(initialValues);
   const [users, setUsers] = useState([]);
+  const [edittableUserData,setEdittableUserData] = useState({})
 
   const isFilledFields =
     userData.userName && userData.userSurname && userData.userSalary;
@@ -26,10 +27,10 @@ function App() {
   };
 
   const handleCleanClick = () => setUserData(initialValues);
+
   const handleRemoveClick = (index) => {
-    setUsers(users.filter((user, userIndex)=>userIndex !== index)
-  )
-};
+  setUsers(users.filter((user,userIndex)=> userIndex!== user))
+  };
 
   console.log("users", users);
 
@@ -54,9 +55,8 @@ function App() {
                     <div>
                       <button className="edit-action">Edit</button>
                       <button
-                        disabled={!isFilledFields}
                         className="remove-action"
-                      onClick={()=>handleRemoveClick(index)}
+                        onClick={() => handleRemoveClick(index)}
                       >
                         Remove
                       </button>
@@ -102,7 +102,9 @@ function App() {
 
             <div className="buttons-wrapper">
               <button type="reset">Clean</button>
-              <button type="submit">Add</button>
+              <button type="submit" disabled={!isFilledFields}>
+                Add
+              </button>
             </div>
           </form>
         </div>
