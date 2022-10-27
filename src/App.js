@@ -35,7 +35,11 @@ function App() {
     setUsers(users.filter((user, userIndex) => userIndex !== user));
   };
    const handleEditClick = (data,index )=>{
-    
+    setUserData(data)
+    setEdittableUserData({
+      isEdit:true,
+      userIndex:index
+    })
    }
 
   console.log("users", users);
@@ -59,7 +63,7 @@ function App() {
                   <td>{users.userSalary}</td>
                   <td>
                     <div>
-                      <button className="edit-action">Edit</button>
+                      <button className="edit-action" onClick={}>Edit</button>
                       <button
                         className="remove-action"
                         onClick={() => handleRemoveClick(index)}
