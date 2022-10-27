@@ -26,6 +26,7 @@ function App() {
   };
 
   const handleCleanClick = ()=> setUserData(initialValues)
+  const handleRemoveClick = ()=> 
 
   console.log("users", users);
 
