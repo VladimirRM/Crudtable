@@ -10,7 +10,10 @@ const initialValues = {
 function App() {
   const [userData, setUserData] = useState(initialValues);
   const [users, setUsers] = useState([]);
-  const [edittableUserData,setEdittableUserData] = useState({})
+  const [edittableUserData, setEdittableUserData] = useState({
+    isEdit: false,
+    userIndex: null,
+  });
 
   const isFilledFields =
     userData.userName && userData.userSurname && userData.userSalary;
@@ -29,7 +32,7 @@ function App() {
   const handleCleanClick = () => setUserData(initialValues);
 
   const handleRemoveClick = (index) => {
-  setUsers(users.filter((user,userIndex)=> userIndex!== user))
+    setUsers(users.filter((user, userIndex) => userIndex !== user));
   };
 
   console.log("users", users);
