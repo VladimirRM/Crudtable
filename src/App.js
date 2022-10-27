@@ -34,6 +34,9 @@ function App() {
   const handleRemoveClick = (index) => {
     setUsers(users.filter((user, userIndex) => userIndex !== user));
   };
+   const handleEditClick = (data,index )=>{
+    
+   }
 
   console.log("users", users);
 
