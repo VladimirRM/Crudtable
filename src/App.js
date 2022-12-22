@@ -1,7 +1,15 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './App.css'
 
+
+  const initialValues = {
+    userName:'',
+    userSurname:'',
+    userSalary:'',
+
+  }
 const App = () => {
+
   return (
     <div>
       <div>
@@ -27,6 +35,10 @@ const App = () => {
             placeholder='Write your surname...' />
             <input type="text"
             placeholder='Write your salary ...' />
+            <div>
+              <button type='reset'>Clean</button>
+              <button type='submit'>Add</button>
+            </div>
           </form>
         </div>
       </div>
