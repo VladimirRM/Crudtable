@@ -15,9 +15,19 @@ const App = () => {
 
 
             <tbody>
-              
+
             </tbody>
           </table>
+        </div>
+        <div>
+          <form action="">
+            <input type="text"
+            placeholder='Write your name...' />
+            <input type="text"
+            placeholder='Write your surname...' />
+            <input type="text"
+            placeholder='Write your salary ...' />
+          </form>
         </div>
       </div>
     </div>
