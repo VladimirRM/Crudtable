@@ -9,6 +9,8 @@ import './App.css'
 
   }
 const App = () => {
+  const [userData,setUserData]=useState(initialValues)
+  const [count,setCount]=useState(0)
 
   return (
     <div>
@@ -40,6 +42,9 @@ const App = () => {
               <button type='submit'>Add</button>
             </div>
           </form>
+          <div>{count}</div>
+              <button onClick={()=>setCount(count -1)}type='button'>Plus</button>
+              <button onClick={()=>setCount(count +1)} type='button'>Minus</button>
         </div>
       </div>
     </div>
