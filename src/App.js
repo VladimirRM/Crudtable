@@ -10,8 +10,8 @@ const App = () => {
   const [userData, setUserData] = useState(initialValues);
   const [users, setUsers] = useState([]);
 
-  const handleSubmitUser =()=>{
-
+  const handleSubmitUser =(e)=>{
+    e.preventDefault()
   }
 
   return (
@@ -29,7 +29,7 @@ const App = () => {
           </table>
         </div>
         <div>
-          <form onSubmit={}>
+          <form onSubmit={handleSubmitUser}>
             <input
               type="text"
               placeholder="Write your name..."
