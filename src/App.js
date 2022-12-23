@@ -11,7 +11,7 @@ const App = () => {
   const [users, setUsers] = useState([]);
 
   const handleSubmitUser =()=>{
-    
+
   }
 
   return (
@@ -29,7 +29,7 @@ const App = () => {
           </table>
         </div>
         <div>
-          <form>
+          <form onSubmit={}>
             <input
               type="text"
               placeholder="Write your name..."
