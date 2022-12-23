@@ -12,6 +12,7 @@ const App = () => {
 
   const handleSubmitUser =(e)=>{
     e.preventDefault()
+    setUsers((prevState)=>[...prevState,userData])
   }
 
   return (
