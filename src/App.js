@@ -10,10 +10,10 @@ const App = () => {
   const [userData, setUserData] = useState(initialValues);
   const [users, setUsers] = useState([]);
 
-  const handleSubmitUser =(e)=>{
-    e.preventDefault()
-    setUsers((prevState)=>[...prevState,userData])
-  }
+  const handleSubmitUser = (e) => {
+    e.preventDefault();
+    setUsers((prevState) => [...prevState, userData]);
+  };
 
   return (
     <div className="wrapper">
@@ -40,6 +40,7 @@ const App = () => {
                   userName: e.target.value,
                 }))
               }
+              value={userData.userName}
             />
             <input
               type="text"
@@ -50,6 +51,7 @@ const App = () => {
                   userSurName: e.target.value,
                 }))
               }
+              value={userData.userSurname}
             />
             <input
               type="text"
@@ -60,6 +62,7 @@ const App = () => {
                   userSalary: e.target.value,
                 }))
               }
+              value={userData.userSalary}
             />
             <div className="buttons-wrapper">
               <button type="reset">Clean</button>
