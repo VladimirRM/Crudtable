@@ -13,6 +13,7 @@ const App = () => {
   const handleSubmitUser = (e) => {
     e.preventDefault();
     setUsers((prevState) => [...prevState, userData]);
+    setUserData(initialValues);
   };
 
   return (
@@ -26,7 +27,11 @@ const App = () => {
             <th>User Salary</th>
             <th>Actions</th>
 
-            <tbody></tbody>
+            <tbody>
+              {users.map((user) => (
+
+              ))}
+            </tbody>
           </table>
         </div>
         <div>
@@ -48,7 +53,7 @@ const App = () => {
               onChange={(e) =>
                 setUserData((prevState) => ({
                   ...prevState,
-                  userSurName: e.target.value,
+                  userSurname: e.target.value,
                 }))
               }
               value={userData.userSurname}
