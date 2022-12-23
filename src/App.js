@@ -10,9 +10,9 @@ const App = () => {
   const [userData, setUserData] = useState(initialValues);
 
   return (
-    <div>
-      <div>
-        <div>
+    <div className="wrapper">
+      <div className="wrapper-content">
+        <div className="table-data">
           <table>
             <th>#</th>
             <th>User Name</th>
@@ -23,17 +23,37 @@ const App = () => {
             <tbody></tbody>
           </table>
         </div>
-        <div>
-          <form action="">
-            <input type="text" placeholder="Write your name..." />
-            <input type="text" placeholder="Write your surname..." />
-            <input type="text" placeholder="Write your salary ..." />
-            <div>
+        <div className="form-data">
+          <form>
+            <input
+              type="text"
+              placeholder="Write your name..." 
+              onChange={(e) =>
+                setUserData((prevState) => ({
+                  ...prevState,
+                  userName: e.target.value,
+                }))
+              }
+            />
+            <input type="text" placeholder="Write your surname..." 
+                  onChange={(e) =>
+                    setUserData((prevState) => ({
+                      ...prevState,
+                      userSurName: e.target.value,
+                    }))
+                  } />
+            <input type="text" placeholder="Write your salary ..."
+                  onChange={(e) =>
+                    setUserData((prevState) => ({
+                      ...prevState,
+                      userSalary: e.target.value,
+                    }))
+                  } />
+            <div className="buttons-wrapper">
               <button type="reset">Clean</button>
               <button type="submit">Add</button>
             </div>
           </form>
-          <div>{count}</div>
         </div>
       </div>
     </div>
