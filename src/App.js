@@ -8,6 +8,7 @@ const initialValues = {
 };
 const App = () => {
   const [userData, setUserData] = useState(initialValues);
+  const [users, setUsers] = useState([]);
 
   return (
     <div className="wrapper">
@@ -23,11 +24,11 @@ const App = () => {
             <tbody></tbody>
           </table>
         </div>
-        <div className="form-data">
+        <div>
           <form>
             <input
               type="text"
-              placeholder="Write your name..." 
+              placeholder="Write your name..."
               onChange={(e) =>
                 setUserData((prevState) => ({
                   ...prevState,
@@ -35,20 +36,26 @@ const App = () => {
                 }))
               }
             />
-            <input type="text" placeholder="Write your surname..." 
-                  onChange={(e) =>
-                    setUserData((prevState) => ({
-                      ...prevState,
-                      userSurName: e.target.value,
-                    }))
-                  } />
-            <input type="text" placeholder="Write your salary ..."
-                  onChange={(e) =>
-                    setUserData((prevState) => ({
-                      ...prevState,
-                      userSalary: e.target.value,
-                    }))
-                  } />
+            <input
+              type="text"
+              placeholder="Write your surname..."
+              onChange={(e) =>
+                setUserData((prevState) => ({
+                  ...prevState,
+                  userSurName: e.target.value,
+                }))
+              }
+            />
+            <input
+              type="text"
+              placeholder="Write your salary ..."
+              onChange={(e) =>
+                setUserData((prevState) => ({
+                  ...prevState,
+                  userSalary: e.target.value,
+                }))
+              }
+            />
             <div className="buttons-wrapper">
               <button type="reset">Clean</button>
               <button type="submit">Add</button>
