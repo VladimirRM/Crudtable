@@ -31,11 +31,13 @@ const App = () => {
     setUsers(users.filter((user, userIndex) => userIndex !== index));
   };
 
-  const handleEditClick =(user,index)=>{
-
-  }
-
-
+  const handleEditClick = (data, index) => {
+    setUserData(data);
+    setEditTableUserData({
+      isEdit: true,
+      userIndex: index,
+    });
+  };
 
   return (
     <div className="wrapper">
@@ -57,7 +59,12 @@ const App = () => {
                   <td>{user.userSalary}</td>
                   <td>
                     <div>
-                      <button className="edit-action">Edit</button>
+                      <button
+                        className="edit-action"
+                        onClick={() => handleEditClick(user, index)}
+                      >
+                        Edit
+                      </button>
                       <button
                         className="remove-action "
                         onClick={() => handleRemoveClick(index)}
