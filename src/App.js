@@ -21,8 +21,11 @@ const App = () => {
     }
   };
 
-  const handleCleanClick = setUserData(initialValues);
+  const handleCleanClick = () => setUserData(initialValues);
 
+  const handleRemoveClick = (index) => {
+    setUsers(users.filter((user, userIndex) => userIndex !== index));
+  };
   return (
     <div className="wrapper">
       <div className="wrapper-content">
@@ -44,7 +47,12 @@ const App = () => {
                   <td>
                     <div>
                       <button className="edit-action">Edit</button>
-                      <button className="remove-action ">Remove</button>
+                      <button
+                        className="remove-action "
+                        onClick={() => handleRemoveClick(index)}
+                      >
+                        Remove
+                      </button>
                     </div>
                   </td>
                 </tr>
