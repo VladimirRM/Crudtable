@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Custominput from "../CustomInput/Custominput";
 import "./App.css";
 
 const initialValues = {
@@ -92,6 +93,7 @@ const App = () => {
         </div>
         <div>
           <form onSubmit={handleSubmitUser} onReset={handleCleanClick}>
+            <Custominput/>
             <input
               type="text"
               placeholder="Write your name..."
@@ -128,7 +130,7 @@ const App = () => {
             <div className="buttons-wrapper">
               <button type="reset">Clean</button>
               <button disabled={!isFilledFields} type="submit">
-                Add
+                {editTableUserData.isEdit  ? 'Edit':'Add'}
               </button>
             </div>
           </form>
