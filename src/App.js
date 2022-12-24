@@ -31,8 +31,12 @@ const App = () => {
     setUsers(users.filter((user, userIndex) => userIndex !== index));
   };
 
+  const handleEditClick =(user,index)=>{
 
-  
+  }
+
+
+
   return (
     <div className="wrapper">
       <div className="wrapper-content">
