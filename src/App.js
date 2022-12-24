@@ -42,7 +42,7 @@ const App = () => {
                   <td>
                     <div>
                       <button className="edit-action">Edit</button>
-                      <button className="remove-action ">Remove</button>
+                      <button  disabled className="remove-action ">Remove</button>
                     </div>
                   </td>
                 </tr>
