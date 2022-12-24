@@ -20,7 +20,19 @@ const App = () => {
   const handleSubmitUser = (e) => {
     e.preventDefault();
     if (isFilledFields) {
-      setUsers((prevState) => [...prevState, userData]);
+      if (editTableUserData.isEdit) {
+        const editedData = users;
+        editedData.splice(editTableUserData.userIndex, 1, userData);
+
+        setUsers(editedData);
+
+        setEditTableUserData({
+          isEdit: false,
+          userIndex: null,
+        });
+      } else {
+        setUsers((prevState) => [...prevState, userData]);
+      }
       setUserData(initialValues);
     }
   };
