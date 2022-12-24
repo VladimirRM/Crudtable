@@ -42,7 +42,7 @@ const App = () => {
                   <td>
                     <div>
                       <button className="edit-action">Edit</button>
-                      <button  disabled className="remove-action ">Remove</button>
+                      <button className="remove-action ">Remove</button>
                     </div>
                   </td>
                 </tr>
@@ -87,7 +87,9 @@ const App = () => {
             />
             <div className="buttons-wrapper">
               <button type="reset">Clean</button>
-              <button type="submit">Add</button>
+              <button disabled={!isFilledFields} type="submit">
+                Add
+              </button>
             </div>
           </form>
         </div>
