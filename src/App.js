@@ -9,6 +9,10 @@ const initialValues = {
 const App = () => {
   const [userData, setUserData] = useState(initialValues);
   const [users, setUsers] = useState([]);
+  const [editTableUserData, setEditTableUserData] = useState({
+    isEdit: false,
+    userIndex: null,
+  });
 
   const isFilledFields =
     userData.userName && userData.userSurname && userData.userSalary;
@@ -26,6 +30,9 @@ const App = () => {
   const handleRemoveClick = (index) => {
     setUsers(users.filter((user, userIndex) => userIndex !== index));
   };
+
+
+  
   return (
     <div className="wrapper">
       <div className="wrapper-content">
