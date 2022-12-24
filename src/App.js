@@ -21,7 +21,7 @@ const App = () => {
     }
   };
 
-  const handleCleanClick =setUserData(initialValues)
+  const handleCleanClick = setUserData(initialValues);
 
   return (
     <div className="wrapper">
@@ -53,7 +53,7 @@ const App = () => {
           </table>
         </div>
         <div>
-          <form onSubmit={handleSubmitUser}>
+          <form onSubmit={handleSubmitUser} onReset={handleCleanClick}>
             <input
               type="text"
               placeholder="Write your name..."
