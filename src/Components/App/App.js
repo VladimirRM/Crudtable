@@ -129,28 +129,8 @@ const App = () => {
               }
               value={userData.userName}
             /> */}
-            <input
-              type="text"
-              placeholder="Write your surname..."
-              onChange={(e) =>
-                setUserData((prevState) => ({
-                  ...prevState,
-                  userSurname: e.target.value,
-                }))
-              }
-              value={userData.userSurname}
-            />
-            <input
-              type="text"
-              placeholder="Write your salary ..."
-              onChange={(e) =>
-                setUserData((prevState) => ({
-                  ...prevState,
-                  userSalary: e.target.value,
-                }))
-              }
-              value={userData.userSalary}
-            />
+     
+      
             <div className="buttons-wrapper">
               <button type="reset">Clean</button>
               <button disabled={!isFilledFields} type="submit">
