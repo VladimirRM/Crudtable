@@ -4,14 +4,15 @@ import "./Custominput.css";
 const Custominput = ({
     placeholder,
     handleChange,
-    value
+    value,
+    filedName
 }) => {
   return (
     <div>
       <input
         type="text"
         placeholder={placeholder}
-        onChange={handleChange}
+        onChange={(e)=>handleChange(e,filedName)}
         value={value}
       />
     </div>

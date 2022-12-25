@@ -52,9 +52,12 @@ const App = () => {
     });
   };
 
-  const handleInputChange = ()=>{
-
-  }
+  const handleInputChange = (e, userName) => {
+    setUserData((prevState) => ({
+      ...prevState,
+      [userName]: e.target.value,
+    }));
+  };
 
   return (
     <div className="wrapper">
@@ -97,15 +100,13 @@ const App = () => {
         </div>
         <div>
           <form onSubmit={handleSubmitUser} onReset={handleCleanClick}>
-            <Custominput 
-            
-            placeholder="Write your name..."
-            
-            handleChange={()=>{}}
+            <Custominput
+              placeholder="Write your name..."
+              handleChange={handleInputChange}
               value={userData.userName}
-            
+              filedName="userName"
             />
-            <input
+            {/* <input
               type="text"
               placeholder="Write your name..."
               onChange={(e) =>
@@ -115,7 +116,7 @@ const App = () => {
                 }))
               }
               value={userData.userName}
-            />
+            /> */}
             <input
               type="text"
               placeholder="Write your surname..."
@@ -141,7 +142,7 @@ const App = () => {
             <div className="buttons-wrapper">
               <button type="reset">Clean</button>
               <button disabled={!isFilledFields} type="submit">
-                {editTableUserData.isEdit  ? 'Edit':'Add'}
+                {editTableUserData.isEdit ? "Edit" : "Add"}
               </button>
             </div>
           </form>
