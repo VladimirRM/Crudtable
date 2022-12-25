@@ -106,6 +106,18 @@ const App = () => {
               value={userData.userName}
               filedName="userName"
             />
+            <Custominput
+              placeholder="Write your surname..."
+              handleChange={handleInputChange}
+              value={userData.userSurname}
+              filedName="userSurname"
+            />
+            <Custominput
+              placeholder="Write your salary..."
+              handleChange={handleInputChange}
+              value={userData.userSalary}
+              filedName="userSalary"
+            />
             {/* <input
               type="text"
               placeholder="Write your name..."
