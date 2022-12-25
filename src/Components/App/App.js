@@ -52,6 +52,10 @@ const App = () => {
     });
   };
 
+  const handleInputChange = ()=>{
+
+  }
+
   return (
     <div className="wrapper">
       <div className="wrapper-content">
@@ -93,7 +97,14 @@ const App = () => {
         </div>
         <div>
           <form onSubmit={handleSubmitUser} onReset={handleCleanClick}>
-            <Custominput/>
+            <Custominput 
+            
+            placeholder="Write your name..."
+            
+            handleChange={()=>{}}
+              value={userData.userName}
+            
+            />
             <input
               type="text"
               placeholder="Write your name..."
