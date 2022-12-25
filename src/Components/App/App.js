@@ -118,19 +118,7 @@ const App = () => {
               value={userData.userSalary}
               filedName="userSalary"
             />
-            {/* <input
-              type="text"
-              placeholder="Write your name..."
-              onChange={(e) =>
-                setUserData((prevState) => ({
-                  ...prevState,
-                  userName: e.target.value,
-                }))
-              }
-              value={userData.userName}
-            /> */}
-     
-      
+
             <div className="buttons-wrapper">
               <button type="reset">Clean</button>
               <button disabled={!isFilledFields} type="submit">
